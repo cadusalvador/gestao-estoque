@@ -8,21 +8,21 @@
 
 ### Rotas Privadas
 
-### Produtos [Rota Privada]
+#### Produtos [Rota Privada]
 - Cadastrar Produtos [privado/admin] `POST /produtos/cadastrar-produto`
 - Listar Produtos [privado] `GET /produtos/listar-produtos`
 - Listar Produtos por Código [privado] `GET /produtos/listar-por-codigo`
 - Alterar Cadastro de Produto [privado/admin] `PUT /produtos/alterar/{id}`
 - Excluir Produtos [privado/admin] `DELETE /produtos/excluir/{id}`
 
-### Fornecedores [Rota Privada para usuarios ADMIN]
+#### Fornecedores [Rota Privada para usuarios ADMIN]
 - Cadastrar Fornecedores [privado/admin] `POST /fornecedores/cadastrar-fornecedor`
 - Listar Fornecedores [privado/admin] `GET /fornecedores/listar-fornecedores`
 - Listar Fornecedores por Código [privado/admin] `GET /fornecedores/listar-fornecedor-por-codigo`
 - Alterar Cadastro de Fornecedor [privado/admin] `PUT /fornecedores/alterar-cadastro/{id}`
 - Excluir Cadastro de Fornecedor [privado/admin] `DELETE /fornecedores/excluirFornecedor`
 
-### Estoque [Rota privada]
+#### Estoque [Rota privada]
 - Cadastrar (ENTRADA) Produto no Estoque [privado/admin] `POST /estoque/cadastrar-entrada`
 - Listar Estoque [privado] `GET /estoque/listar`
 - Vender (SAIDA) Produtos [privado] `PUT /estoque/vender/{id}/`
