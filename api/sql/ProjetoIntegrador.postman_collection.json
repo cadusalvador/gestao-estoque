@@ -1,0 +1,511 @@
+{
+	"info": {
+		"_postman_id": "e1f94f3f-32ac-4839-8c2b-2e72eadba1f4",
+		"name": "ProjetoIntegrador",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7706064"
+	},
+	"item": [
+		{
+			"name": "Produtos [Rota Privada]",
+			"item": [
+				{
+					"name": "Listar Produtos [privado]",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/produtos/listar-produtos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produtos",
+								"listar-produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Produto [privado]",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Produto Teste\",\r\n    \"descricao\": \"Produto de teste\",\r\n    \"preco\": 12.00,\r\n    \"idFornecedor\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/produtos/cadastrar-produto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produtos",
+								"cadastrar-produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Produtos por Código [privado]",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/produtos/listar-por-codigo?codigos=2&codigos=4&codigos=6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produtos",
+								"listar-por-codigo"
+							],
+							"query": [
+								{
+									"key": "codigos",
+									"value": "2"
+								},
+								{
+									"key": "codigos",
+									"value": "4"
+								},
+								{
+									"key": "codigos",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir Produtos [privado]",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/produtos/excluir/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produtos",
+								"excluir",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alterar Cadastro de Produto [privado]",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Biquini cor preta\",\r\n    \"descricao\": \"Biquini\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/produtos/alterar/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produtos",
+								"alterar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Fornecedores [Rota Privada para Admin]",
+			"item": [
+				{
+					"name": "Cadastrar Fornecedores [privado/admin]",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Fornecedor 4\",\r\n    \"endereco\": \"Rua D, 012\",\r\n    \"cidade\": \"Cidade D\",\r\n    \"estado\": \"Estado D\",\r\n    \"telefone\": \"(44) 4567-8901\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/fornecedores/cadastrar-fornecedor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fornecedores",
+								"cadastrar-fornecedor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Fornecedores [privado/admin]",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/fornecedores/listar-fornecedores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fornecedores",
+								"listar-fornecedores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alterar Cadastro de Fornecedor [privado/admin]",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Fornecedor 5\",\r\n    \"endereco\": \"Rua D, 012\",\r\n    \"cidade\": \"Cidade D\",\r\n    \"estado\": \"Estado D\",\r\n    \"telefone\": \"(44) 4567-8901\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/fornecedores/alterar-cadastro/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fornecedores",
+								"alterar-cadastro",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Fornecedores por Código [privado/admin]",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/fornecedores/listar-fornecedor-por-codigo?codigos=1&codigos=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fornecedores",
+								"listar-fornecedor-por-codigo"
+							],
+							"query": [
+								{
+									"key": "codigos",
+									"value": "1"
+								},
+								{
+									"key": "codigos",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir Cadastro de Fornecedor [privado/admin]",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/fornecedores/excluirFornecedor/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fornecedores",
+								"excluirFornecedor",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Estoque [Rota Privada]",
+			"item": [
+				{
+					"name": "Cadastrar (ENTRADA) Produto no Estoque [privado/admin]",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantidade\": 50,\r\n    \"precoUnitario\": 19.99,\r\n    \"movimento\": \"ENTRADA\",\r\n    \"produtoId\": 8,\r\n    \"usuarioId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/estoque/cadastrar-entrada",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estoque",
+								"cadastrar-entrada"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vender (SAIDA) Produtos [privado]",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantidade\": 50,\r\n    \"precoUnitario\": 19.99,\r\n    \"movimento\": \"ENTRADA\",\r\n    \"produto\": 7,\r\n    \"usuario\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/estoque/vender/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estoque",
+								"vender",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Adicionar Produtos (ENTRADA) no estoque",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantidade\": 50,\r\n    \"movimento\": \"ENTRADA\",\r\n    \"usuario\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/estoque/adicionar-produto/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estoque",
+								"adicionar-produto",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Estoque [privado]",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/estoque/listar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estoque",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Incluir Usuario [publico]",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Dono da Loja 3\",\r\n    \"login\": \"dono_loja3\",\r\n    \"senha\": \"1234\",\r\n    \"permissoes\": [\r\n        \"ADMIN\", \"USUARIO\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login [publico]",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "dono_loja3",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout [privado]",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
