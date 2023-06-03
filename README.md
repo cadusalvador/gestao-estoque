@@ -1,6 +1,4 @@
-# DRPRIBEIRAOPRETO-PI-em-Computação-I-Turma-001-Grupo-003
-
-API para Sistema de Gerenciamento de Estoque para loja de Roupas
+# API para Sistema de Gerenciamento de Estoque para loja de Roupas
 
 ## Funcionalidades
 
