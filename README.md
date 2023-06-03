@@ -6,6 +6,8 @@
 - Login [público] `POST /login`
 - Incluir Usuário [público] `POST /usuarios`
 
+### Rotas Privadas
+
 ### Produtos [Rota Privada]
 - Cadastrar Produtos [privado/admin] `POST /produtos/cadastrar-produto`
 - Listar Produtos [privado] `GET /produtos/listar-produtos`
